@@ -39,7 +39,7 @@
 
 % Set the citation style
 \usepackage[
-    backend=biber,      % Specifies the backend to be used by BibLaTeX for processing the bibliography. 'biber' is the default backend.
+    backend=bibtex,      % Specifies the backend to be used by BibLaTeX for processing the bibliography. 'biber' is the default backend.
     maxnames=20,        % Limits the maximum number of author names to display before abbreviating with "et al."
     style=nature,       % Sets the citation style to 'nature,' which is commonly used in scientific papers.
     sorting=ydnt,       % Specifies the sorting order of entries in the bibliography:
@@ -94,7 +94,7 @@
   \begin{center}
     \Large\textbf{#1}\normalsize \\ % Name in large bold font
     \href{mailto:#2}{#2} \\ % Email with mailto: link
-    \href{https://#3}{#3} \\ % Website with link
+    \href{http://#3}{#3} \\ % Website with link
     #4 % Address
   \end{center}
 }
@@ -103,15 +103,21 @@
 
 \begin{document}
 \include{colors.tex} % Load custom colors from colors file
-\mytitle{Your Name}{person@gmail.com}{yourwebsite.com}{Your Address\\Goes here\\This field can be excluded} % Insert your custom title
-
-
+\mytitle{Huanan Herman ZHAO}{hermanzhaozzzz@gmail.com}{aboutme.zhaohuanan.cc}{
+    Beijing\\
+    P.R. China\\
+    } % Insert your custom title
 % Ensure right side margin is not surpassed by bibliography and the right margin is aligned throughout
 \RaggedRight
 
 
 % These \pdfbookmark lines create bookmarks in the exported PDF document that display in the left pane.
 % Value in [] sets the indentation level of the bookmark
+\pdfbookmark[1]{Personal Information}{}
+\section*{Personal Information}
+% \line{1\textwidth}
+\input{personal_info.tex}
+
 \pdfbookmark[1]{Education}{}
 \section*{Education}
 \input{education.tex}
@@ -137,6 +143,8 @@
 \faGoogle~\href{https://scholar.google.com/}{Google Scholar}\\
 $\dagger \rightarrow$ Equal contribution
 \normalsize
+% !test
+% \cite{Goes Here}
 
 
 \pdfbookmark[2]{Journal Articles}{journal-article}
