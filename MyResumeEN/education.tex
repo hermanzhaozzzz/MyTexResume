@@ -6,8 +6,8 @@
 % - After the table: \footnotetext, \renewcommand, \setcounter
 
 % Different numbers in "\setcounter{footnote}{0}" use different symbols
-\renewcommand{\thefootnote}{\fnsymbol{footnote}}
-\setcounter{footnote}{0}
+% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+% \setcounter{footnote}{0}
 \begin{longtable}{p{0.6\textwidth} p{0.4\textwidth}}
 %     % Use custom symbol footnote for "expected"
     \textit{\textbf{Tsinghua University, Beijing, China}} & \textit{\textbf{Sept. 2019 $\sim$ Dec. 2024\footnotemark[1]}} \\
@@ -28,5 +28,5 @@
 \footnotetext[1]{Expected.}
 
 % Restore the default footnote numbering
-\renewcommand{\thefootnote}{\arabic{footnote}}
-\setcounter{footnote}{1}
+% \renewcommand{\thefootnote}{\arabic{footnote}}
+% \setcounter{footnote}{1}
