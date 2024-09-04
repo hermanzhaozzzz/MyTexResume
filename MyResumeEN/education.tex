@@ -6,8 +6,8 @@
 % - After the table: \footnotetext, \renewcommand, \setcounter
 
 % Different numbers in "\setcounter{footnote}{0}" use different symbols
-% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
-% \setcounter{footnote}{0}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setcounter{footnote}{0}
 \begin{longtable}{p{0.6\textwidth} p{0.4\textwidth}}
 %     % Use custom symbol footnote for "expected"
     \textit{\textbf{Tsinghua University, Beijing, China}} & \textit{\textbf{Sept. 2019 $\sim$ Dec. 2024\footnotemark[1]}} \\
@@ -15,18 +15,23 @@
     specializing in \textbf{Bioinformatics \& Genome Editing} & \\
     & \\
     \textit{\textbf{Peking University, Beijing, China}} & \textit{\textbf{Sept. 2019 $\sim$ Dec. 2024\footnotemark[1]}} \\
-    Ph.D. joint training &  \\
+    Ph.D. joint training\footnotemark[2] &  \\
     & \\
-    \textit{\textbf{Northwest A\&F University, Shaanxi, China}} & \textit{\textbf{Sept. 2014 $\sim$ June 2019}} \\
-    B.V.Sc. (5 years) & \\
+    \textit{\textbf{Tsinghua University, Beijing, China}} & \textit{\textbf{Sept. 2021 $\sim$ Mar. 2023}} \\
+    Big Data Practice Course Project (Graduate Certificace)
+
     & \\
-    \textit{\textbf{China Agricultural University, Beijing, China}} & \textit{\textbf{Sept. 2016 $\sim$ June 2018}} \\
+    \textit{\textbf{Northwest A\&F University, Shaanxi, China}} & \textit{\textbf{Sept. 2014 $\sim$ Jun. 2019}} \\
+    B.V.Sc. (five-year degree) & \\
+    & \\
+    \textit{\textbf{China Agricultural University, Beijing, China}} & \textit{\textbf{Sept. 2016 $\sim$ Jun. 2018}} \\
     B.V.Sc. exchange student &  \\
 \end{longtable}
+% 【【【【【【【【todo 清华微专业】】】】】】】】
 
 % Add text for the custom footnote
 \footnotetext[1]{Expected.}
-
+\footnotetext[2]{Tsinghua University (Degree awarding institution) and Peking University (Co-training institution).}
 % Restore the default footnote numbering
-% \renewcommand{\thefootnote}{\arabic{footnote}}
-% \setcounter{footnote}{1}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{1}
