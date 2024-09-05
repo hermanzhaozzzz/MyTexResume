@@ -1,5 +1,5 @@
 \documentclass[11pt]{article} % Choose the document class and font size
-\usepackage[margin=1in]{geometry} % Page layout settings
+\usepackage[left=0.6in,top=0.6in,right=0.8in,bottom=0.6in]{geometry} 
 % \usepackage{titlesec}
 % \titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[\hrule]
 
@@ -16,7 +16,7 @@
                         % n - name
                         % t - title
                         % none - follow the order in ref.bib
-    defernumbers=true,  % Delays the assignment of citation numbers until the end of the document, allowing for the correct order of citations within each bibliography section.
+    % defernumbers=true,  % Delays the assignment of citation numbers until the end of the document, allowing for the correct order of citations within each bibliography section.
 ]{biblatex}
 \addbibresource{ref.bib} % Adds the bibliography resource file 'ref.bib' containing all the references.
 
@@ -97,17 +97,6 @@
 \label{exp_research}
 \input{exp_research.tex}
 
-\pdfbookmark[1]{Awards \& Honors}{awards}
-\section*{Awards \& Honors}
-\label{awards}
-\input{awards.tex}
-
-\pdfbookmark[1]{Expertise}{expertise}
-\section*{Expertise}
-\label{expertise}
-\input{expertise.tex}
-
-
 
 \pdfbookmark[1]{Publications}{pubs}
 \section*{Publications}
@@ -116,15 +105,9 @@
 % Add equal contribution dagger
 \vspace{-.75em}
 \small
-\faGoogle~\href{https://scholar.google.com/citations?user=ojSVoWQAAAAJ}{Google Scholar}\\
-$\dagger \rightarrow$ Equal contribution
+$\dagger$ co-first author
 \normalsize
 
-% \pdfbookmark[2]{Research Articles}{research-article}
-% \subsection*{Research Articles}
-% \label{research-article}
-% \newrefcontext[labelprefix=A] % Will prefix bibliography numbers with this letter
-% Ensures publications which are not cited in the document are included in the above sections
 
 \nocite{*} % Ensures uncited items are included
 \printbibliography[
@@ -134,18 +117,16 @@ $\dagger \rightarrow$ Equal contribution
     % keyword={A,R,P} % Include items in ref.bib with keyword={J}
 ]
 
-% \pdfbookmark[2]{Review Articles}{reviews}
-% \subsection*{Review Articles}
-% \label{reviews}
-% \newrefcontext[labelprefix=R]
-% \printbibliography[type=article,heading=none,resetnumbers=true,keyword=R]
+\pdfbookmark[1]{Presentations}{presentations}
+\section*{Presentations}
+\label{presentations}
+\input{presentations.tex}
 
-% \pdfbookmark[2]{Protocols}{protocols}
-% \subsection*{Protocol}
-% \label{protocols}
-% \newrefcontext[labelprefix=P]
-% \printbibliography[type=article,heading=none,resetnumbers=true,keyword=P]
-    
+\pdfbookmark[1]{Awards \& Honors}{awards}
+\section*{Awards \& Honors}
+\label{awards}
+\input{awards.tex}
+
 
 \pdfbookmark[1]{Tools \& Software}{tools}
 \section*{Tools \& Software}
@@ -153,44 +134,6 @@ $\dagger \rightarrow$ Equal contribution
 \input{tools.tex}
 
 
-% \pdfbookmark[1]{Presentations}{presentations}
-% \section*{Presentations}
-% \label{presentations}
-
-% Include any additional details here
-% \vspace{-.75em}
-% \small
-% $\dagger \rightarrow$ Equal contribution
-% \normalsize
-
-% \pdfbookmark[2]{Talks}{talks}
-% \subsection*{Talks}
-% \label{talks}
-% \newrefcontext[labelprefix=T]
-% \printbibliography[type=misc,heading=none,resetnumbers=true,keyword=T]
-
-% \pdfbookmark[2]{Posters}{posters}
-% \subsection*{Posters}
-% \label{posters}
-% \newrefcontext[labelprefix=P]        
-% \printbibliography[type=misc,heading=none,resetnumbers=true,keyword=P]
-
-\pdfbookmark[1]{Presentations}{presentations}
-\section*{Presentations}
-\label{presentations}
-\input{presentations.tex}
-
-
-% \pdfbookmark[2]{Demonstrations \& Tutorials}{demos}
-% \subsection*{Demonstrations \& Tutorials}
-% \label{demos}
-% \newrefcontext[labelprefix=D] \printbibliography[type=misc,heading=none,resetnumbers=true,keyword=D]
-
-
-% \pdfbookmark[1]{Selected Media Coverage}{media}
-% \section*{Selected Media Coverage}
-% \label{media}
-% \input{media.tex} % Input lines load the material from the subdocuments
 
 \pdfbookmark[1]{Selected Tutorials}{tutorials}
 \section*{Selected Tutorials}
@@ -204,29 +147,15 @@ $\dagger \rightarrow$ Equal contribution
 \input{teaching.tex}
 
 
-% \pdfbookmark[1]{Academic Advising}{advising}
-% \section*{Academic Advising}
-% \label{advising}
-% \input{advising.tex}
-
-
-% \pdfbookmark[1]{Academic Service}{service}
-% \section*{Academic Service}
-% \label{service}
-% \input{service.tex}
-
-
-% \pdfbookmark[1]{Other Experience}{exp_other}
-% \section*{Other Experience}
-% \label{exp_other}
-% \input{exp_other.tex}
-
+\pdfbookmark[1]{Expertise}{expertise}
+\section*{Expertise}
+\label{expertise}
+\input{expertise.tex}
 
 % Pretty ending with the date last updated
 \centering
 \rule{0.25\linewidth}{0.4pt}\\
 \medskip
 Last updated: \today\\
-Compiled from \LaTeX codes
 
 \end{document}
