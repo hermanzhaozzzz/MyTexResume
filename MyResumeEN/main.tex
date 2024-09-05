@@ -7,7 +7,7 @@
 
 % Set the citation style
 \usepackage[
-    backend=bibtex,      % Specifies the backend to be used by BibLaTeX for processing the bibliography. 'biber' is the default backend.
+    backend=bibtex,     % Specifies the backend to be used by BibLaTeX for processing the bibliography. 'biber' is the default backend.
     maxnames=20,        % Limits the maximum number of author names to display before abbreviating with "et al."
     style=nature,       % Sets the citation style to 'nature,' which is commonly used in scientific papers.
     sorting=ydnt,       % Specifies the sorting order of entries in the bibliography:
@@ -36,6 +36,14 @@
 % For underlining with line breaks
 \usepackage{soul} 
 
+% 自定义列表环境
+\usepackage{enumitem}
+% 设置列表环境的间距和样式  
+\setlist[itemize]{nosep, leftmargin=*}  
+
+% 用于创建多列环境  
+\usepackage{multicol} 
+
 % All fonts: https://tug.org/FontCatalogue/
 \usepackage{kpfonts} % More professional font
 % \usepackage[default]{sourcecodepro} % Code-like font
@@ -60,11 +68,13 @@
 %%% CONVENIENCE FUNCTIONS GO HERE %%%
 %%% ----------------------------- %%%
 \newcommand{\mytitle}[1]{
+    \hfill {\tiny Updated: \today}\\
   \begin{center}
-    Curriculum Vitae\\
+    Curriculum Vitae
     \hspace{4pt} \\ % Name in large bold font
     \Large\textbf{#1}\normalsize \\
     \hspace{4pt} \\ % Name in large bold font
+    
   \end{center}
 }
 %%% ----------------------------- %%%
@@ -75,6 +85,9 @@
 \mytitle{Huanan (Herman) ZHAO}
 % Ensure right side margin is not surpassed by bibliography and the right margin is aligned throughout
 \RaggedRight
+
+% Pretty ending with the date last updated
+
 
 
 % These \pdfbookmark lines create bookmarks in the exported PDF document that display in the left pane.
@@ -129,9 +142,14 @@ $\dagger$ co-first author
 
 
 
+\pdfbookmark[1]{Expertise}{expertise}
+\section*{Expertise}
+\label{expertise}
+\input{expertise.tex}
 
-\pdfbookmark[1]{Tools \& Software}{tools}
-\section*{Tools \& Software}
+
+\pdfbookmark[1]{Open Source contributions}{tools}
+\section*{Open Source contributions}
 \label{tools}
 \input{tools.tex}
 
@@ -147,17 +165,5 @@ $\dagger$ co-first author
 \section*{Teaching}
 \label{teaching}
 \input{teaching.tex}
-
-
-\pdfbookmark[1]{Expertise}{expertise}
-\section*{Expertise}
-\label{expertise}
-\input{expertise.tex}
-
-% Pretty ending with the date last updated
-\centering
-\rule{0.25\linewidth}{0.4pt}\\
-\medskip
-Last updated: \today\\
 
 \end{document}
