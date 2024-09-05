@@ -10,7 +10,7 @@
     backend=bibtex,      % Specifies the backend to be used by BibLaTeX for processing the bibliography. 'biber' is the default backend.
     maxnames=20,        % Limits the maximum number of author names to display before abbreviating with "et al."
     style=nature,       % Sets the citation style to 'nature,' which is commonly used in scientific papers.
-    sorting=none,       % Specifies the sorting order of entries in the bibliography:
+    sorting=ydnt,       % Specifies the sorting order of entries in the bibliography:
                         % y - year (descending)
                         % d - descending order
                         % n - name
@@ -92,11 +92,6 @@
 \section*{Education}
 \input{education.tex}
 
-\pdfbookmark[1]{Research Experience}{exp_research}
-\section*{Research Experience}
-\label{exp_research}
-\input{exp_research.tex}
-
 
 \pdfbookmark[1]{Publications}{pubs}
 \section*{Publications}
@@ -117,15 +112,22 @@ $\dagger$ co-first author
     % keyword={A,R,P} % Include items in ref.bib with keyword={J}
 ]
 
+\pdfbookmark[1]{Awards \& Honors}{awards}
+\section*{Awards \& Honors}
+\label{awards}
+\input{awards.tex}
+
+\pdfbookmark[1]{Research Experience}{exp_research}
+\section*{Research Experience}
+\label{exp_research}
+\input{exp_research.tex}
+
 \pdfbookmark[1]{Presentations}{presentations}
 \section*{Presentations}
 \label{presentations}
 \input{presentations.tex}
 
-\pdfbookmark[1]{Awards \& Honors}{awards}
-\section*{Awards \& Honors}
-\label{awards}
-\input{awards.tex}
+
 
 
 \pdfbookmark[1]{Tools \& Software}{tools}
