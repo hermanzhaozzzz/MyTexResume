@@ -41,6 +41,7 @@
 % 设置列表环境的间距和样式  
 \setlist[itemize]{nosep, leftmargin=*}  
 \setlist[enumerate]{nosep, leftmargin=*}  
+\usepackage{graphicx}
 
 % 用于创建多列环境  
 \usepackage{multicol} 
@@ -111,12 +112,19 @@
 \section*{Publications}
 \label{pubs}
 
-% Add equal contribution dagger
+% Add equal contribution dagger and google scholar
+\newcommand*{\scholarsocialsymbol}{\includegraphics[height=.6\baselineskip]{google-scholar}}
+
 \vspace{-.75em}
 \small
-$\dagger$ co-first author
-\normalsize
+$\dagger$ co-first author \hspace{2em}  \scholarsocialsymbol ~\href{https://scholar.google.com/citations?user=ojSVoWQAAAAJ&hl}{Huanan Herman Zhao}
 
+
+
+% 自定义google scholar
+
+
+% 
 
 \nocite{*} % Ensures uncited items are included
 \printbibliography[
