@@ -1,7 +1,17 @@
 \documentclass[11pt]{article} % Choose the document class and font size
 \usepackage[left=0.6in,top=0.6in,right=0.8in,bottom=0.6in]{geometry} 
-% \usepackage{titlesec}
-% \titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}[\hrule]
+\usepackage{titlesec}
+\usepackage{xcolor}
+% 自定义颜色
+\definecolor{darkred}{RGB}{139,0,0}  % 定义深红色
+% 重新定义带有红色标题和水平线的 section
+% \newcommand{\mysection}[1]{
+%   \section*{\textcolor{darkred}{#1}}  % 设置标题为深红色
+%   \vspace{-1.8em}  % 调整标题与水平线的距离
+%   \rule{\textwidth}{0.4pt}  % 生成整行宽的水平线
+%   \vspace{-1.2em}  % 调整水平线与内容的距离
+% }
+
 
 
 
@@ -53,7 +63,7 @@
 
 % Control hyperlinks and colors
 % CUSTOM COLORS INCLUDED DIRECTLY AFTER \begin{document}
-\usepackage{xcolor}
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,        % Enable colored links
@@ -115,7 +125,7 @@
 % Add equal contribution dagger and google scholar
 \newcommand*{\scholarsocialsymbol}{\includegraphics[height=.6\baselineskip]{google-scholar}}
 
-\vspace{-.75em}
+% \vspace{-.75em}
 \small
 $\dagger$ co-first author \hspace{2em}  \scholarsocialsymbol ~\href{https://scholar.google.com/citations?user=ojSVoWQAAAAJ&hl}{Huanan Herman Zhao}
 
@@ -133,6 +143,9 @@ $\dagger$ co-first author \hspace{2em}  \scholarsocialsymbol ~\href{https://scho
     resetnumbers=true, % Start item counter from zero
     % keyword={A,R,P} % Include items in ref.bib with keyword={J}
 ]
+
+\section*{Journal Reviewer}
+\input{service.tex}
 
 \pdfbookmark[1]{Awards \& Honors}{awards}
 \section*{Awards \& Honors}
@@ -157,17 +170,17 @@ $\dagger$ co-first author \hspace{2em}  \scholarsocialsymbol ~\href{https://scho
 \input{expertise.tex}
 
 
-\pdfbookmark[1]{Open Source contributions}{tools}
-\section*{Open Source contributions}
-\label{tools}
-\input{tools.tex}
+% \pdfbookmark[1]{Open Source contributions}{tools}
+% \section*{Open Source contributions}
+% \label{tools}
+% \input{tools.tex}
 
 
 
-\pdfbookmark[1]{Selected Tutorials}{tutorials}
-\section*{Selected Tutorials}
-\label{tutorials}
-\input{tutorials.tex}
+% \pdfbookmark[1]{Selected Tutorials}{tutorials}
+% \section*{Selected Tutorials}
+% \label{tutorials}
+% \input{tutorials.tex}
 
 
 \pdfbookmark[1]{Teaching}{teaching}
